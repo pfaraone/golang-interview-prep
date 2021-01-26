@@ -10,9 +10,9 @@ func isValid(s string) bool {
 	bracketStack := make([]string, 0)
 	for char := range s {
 		stringVersion := string(char)
-		bracket, in_map := bracketDict[stringVersion]
+		bracket, inMap := bracketDict[stringVersion]
 		// case : opening bracket -> push onto stack
-		if !in_map {
+		if !inMap {
 			bracketStack = append(bracketStack, stringVersion)
 		} else {
 			// pop off stack most recent pushed on open bracket
