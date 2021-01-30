@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func myinsertionsort(arr []int) []int {
 	for i := 1; i < len(arr); i++ {
 		valueToSort := arr[i]
@@ -10,4 +12,9 @@ func myinsertionsort(arr []int) []int {
 		}
 	}
 	return arr
+}
+
+func main() {
+	my_arr := []int{16, 19, 13, 18, 15, 12}
+	fmt.Println(myinsertionsort(my_arr))
 }
